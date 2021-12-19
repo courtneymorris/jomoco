@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Home extends Component {
-  constructor(props) {
-    super();
+import MainNavigation from "./mainNavigation";
+import Categories from "./categories";
 
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="home-wrapper">
-        <h1>Hello From the Home Page</h1>
-      </div>
-    );
-  }
+export default function Home() {
+  return (
+    <div className="home-wrapper">
+      <MainNavigation />
+      <Categories />
+    </div>
+  );
 }

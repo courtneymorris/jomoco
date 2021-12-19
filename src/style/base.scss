@@ -7,16 +7,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app-wrapper {
-  text-align: center;
-  background-color: black;
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.home-wrapper {
+.app-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  h1 {
-    color: red;
+  min-height: 100vh;
+  max-width: calc(100vw - 1.25em);
+
+  @media screen and (max-width: 750px) {
+    width: 100vw;
+  }
+
+  @media screen and (max-height: 100vh) {
+    width: 100vw;
   }
 }

@@ -1,24 +1,21 @@
 import "../style/main.scss";
-
 import Home from "./home";
+import AboutUs from "./aboutUs";
+import ShopInPerson from "./shopInPerson";
 
-import React, { Component } from "react";
-import { Router, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-export default class App extends Component {
-  constructor(props) {
-    super();
-
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="app-wrapper">
-        <Router>
+export default function App() {
+  return (
+    <div className="app-wrapper">
+      <Router>
+        <Switch>
           <Route path="/" component={Home} />
-        </Router>
-      </div>
-    );
-  }
+          <Route path="/about-us" component={AboutUs} />
+          <Route path="/shop-in-person" component={ShopInPerson} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
