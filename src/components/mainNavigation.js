@@ -22,7 +22,7 @@ export default function MainNavigation() {
       className={
         position === "top"
           ? "main-navigation-wrapper"
-          : "main-navigation-wrapper-scrolled"
+          : "main-navigation-wrapper, scrolled"
       }
     >
       <div className="nav-links">
